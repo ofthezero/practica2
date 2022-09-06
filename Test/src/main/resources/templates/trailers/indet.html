@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trailers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:insert="fragments/header :: defaultheader"></div>
+
+<div th:each="el : ${trailers}">
+    <h2 th:text="${el.nameT}"></h2>
+    <h2 th:text="${el.raiting1}"></h2>
+    <h3 th:text="${el.raiting2}"></h3>
+    <p th:text="${el.date}"></p>
+    <h3 th:text="${el.season}"></h3>
+</div>
+
+<form method="get" action="/trailers/seartrailers">
+    <input type="text" name="nameT" id="nameT">
+    <input type="submit" value="Найти">
+</form>
+
+<a href="/trailers/adde" class="btn btn-primary">Добавить новый сериал</a>
+
+</body>
+</html>

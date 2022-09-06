@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Passport</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:insert="fragments/header :: defaultheader"></div>
+
+<form action="/passport/adds" method="post">
+
+    <input type="text" id="name" name="name" placeholder="Имя"><br>
+    <input type="text" id="surname" name="surname" placeholder="Фамилия"><br>
+    <input type="text" id="petronymic" name="petronymic" placeholder="Отчество"><br>
+    <input type="text" id="snils_number" name="snils_number" placeholder="Номер Снилс"><br>
+    <input type="text" id="oms_number" name="oms_number" placeholder="Номер ОМС"><br>
+    <br>
+    <input type="submit" value="Добавить данные" class="btn btn-success"><br>
+</form>
+<br>
+<a href="/passport/" class="btn btn-primary">Назад</a>
+
+</body>
+</html>
